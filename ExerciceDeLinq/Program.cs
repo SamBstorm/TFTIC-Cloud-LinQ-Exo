@@ -156,7 +156,7 @@ namespace ExerciceDeLinq
 
             #region Correction complète
 
-            #region EX 1.1
+            #region EX 2.1
             {
                 //var Result11 = from s in dc.Students
                 //               select new
@@ -183,7 +183,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 1.2
+            #region EX 2.2
             {
                 //var Result12 = from s in dc.Students
                 //               select new
@@ -209,7 +209,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 1.3
+            #region EX 2.3
             {
                 //IEnumerable<string> Result13 = from s in dc.Students
                 //                               select string.Format("{0} | {1} | {2} | {3} | {4} | {5} | {6} | {7}", s.Student_ID, s.First_Name, s.Last_Name, s.BirthDate.ToShortDateString(), s.Login, s.Section_ID, s.Year_Result, s.Course_ID);
@@ -230,7 +230,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 2.1
+            #region EX 3.1
             {
                 //var Result21 = from s in dc.Students
                 //               where s.BirthDate.Year < 1955
@@ -253,7 +253,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 2.2
+            #region EX 3.2
             {
                 //var Result22 = from s in dc.Students
                 //               where s.BirthDate.Year >= 1955 && s.BirthDate.Year <= 1965
@@ -275,7 +275,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 2.3
+            #region EX 3.3
             {
                 //var Result23 = from s in dc.Students
                 //               where s.Last_Name.ToLower().EndsWith("r")
@@ -297,7 +297,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 2.4
+            #region EX 3.4
             {
                 //var Result24 = from s in dc.Students
                 //               where s.Year_Result <= 3
@@ -322,7 +322,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 2.5
+            #region EX 3.5
             {
                 //var Result25 = from s in dc.Students
                 //               where s.Section_ID == 1110
@@ -348,7 +348,7 @@ namespace ExerciceDeLinq
 
             #endregion
 
-            #region EX 2.6
+            #region EX 3.6
             {
                 //var Result26 = from s in dc.Students
                 //               where !(s.Year_Result >= 12 && s.Year_Result <= 18) && (s.Section_ID == 1010 || s.Section_ID == 1020)
@@ -373,7 +373,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 2.7
+            #region EX 3.7
             {
                 //var Result27 = from s in dc.Students
                 //               where s.Section_ID.ToString().StartsWith("13") && s.Year_Result * 5 < 60
@@ -408,7 +408,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 3.1
+            #region EX 4.1
             {
                 //double Result31 = (from s in dc.Students
                 //                   select s.Year_Result).Average();
@@ -421,7 +421,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 3.2
+            #region EX 4.2
             {
                 //int Result32 = (from s in dc.Students
                 //                select s.Year_Result).Max();
@@ -434,7 +434,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 3.3
+            #region EX 4.3
             {
                 //int Result33 = (from s in dc.Students
                 //                select s.Year_Result).Sum();
@@ -447,7 +447,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 3.4
+            #region EX 4.4
             {
                 //int Result34 = (from s in dc.Students
                 //                select s.Year_Result).Min();
@@ -460,7 +460,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 3.5
+            #region EX 4.5
             {
                 //int Result35 = (from s in dc.Students
                 //                select s).Count(s => s.Year_Result % 2 == 1);
@@ -473,7 +473,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.1
+            #region EX 5.1
             {
                 //var Result41 = from s in dc.Students
                 //               group s by s.Section_ID into SubStudents
@@ -496,7 +496,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.2
+            #region EX 5.2
             {
                 //var Result42 = from s in dc.Students
                 //               where s.Section_ID.ToString().StartsWith("10")
@@ -521,7 +521,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.3
+            #region EX 5.3
             {
                 //var Result43 = from s in dc.Students
                 //               where s.BirthDate.Year >= 1970 && s.BirthDate.Year <= 1985
@@ -546,7 +546,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.4
+            #region EX 5.4
             {
                 //var Result44 = from st in dc.Students
                 //               group st by st.Section_ID into IGroupStudents
@@ -579,7 +579,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.5
+            #region EX 5.5
             {
                 //var Result45 = from c in dc.Courses
                 //               join p in dc.Professors on c.Professor_ID equals p.Professor_ID
@@ -603,7 +603,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.6
+            #region EX 5.6
             {
                 //var Result46 = from se in dc.Sections
                 //               join st in dc.Students on se.Delegate_ID equals st.Student_ID
@@ -628,7 +628,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.7
+            #region EX 5.7
             {
                 //var Result47 = from se in dc.Sections
                 //               join p in dc.Professors on se.Section_ID equals p.Section_ID into SubProfs
@@ -658,7 +658,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.8
+            #region EX 5.8
             {
                 //var Result48 = from se in dc.Sections
                 //               join p in dc.Professors on se.Section_ID equals p.Section_ID into SubProfs
@@ -690,7 +690,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.9 (Cross Join)
+            #region EX 5.9 (Cross Join)
             {
                 //var Result49 = from s in dc.Students
                 //               from g in dc.Grades
@@ -717,7 +717,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.10 (Très Très HARD!!!)
+            #region EX 5.10 (Très Très HARD!!!)
             {
                 //var Result410 = from p in dc.Professors
                 //                join c in dc.Courses on p.Professor_ID equals c.Professor_ID into SubCourses
@@ -776,7 +776,7 @@ namespace ExerciceDeLinq
             }
             #endregion
 
-            #region EX 4.11
+            #region EX 5.11
             {
                 //var Result411 = from p in dc.Professors
                 //                join c in dc.Courses on p.Professor_ID equals c.Professor_ID into SubCourses
